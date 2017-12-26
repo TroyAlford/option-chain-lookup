@@ -1,0 +1,56 @@
+.search-results {
+  padding: 15px;
+
+  header {
+    font-size: 10px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+  }
+
+  table {
+    border-collapse: separate;
+    font-family: "Segoe UI", Arial, sans-serif;
+    width: 100%;
+
+    tbody {
+      height: 325px;
+      overflow-y: auto;
+    }
+
+    tr.category-header > th {
+      font-weight: bold;
+      text-align: center;
+    }
+
+    th, td {
+      border: 1px solid;
+      padding: 5px;
+      text-align: right;
+
+      &.strike {
+        text-align: center;
+      }
+
+      &.unavailable {
+        background-color: #ddd;
+        color: #aaa;
+        font-style: italic;
+      }
+    }
+
+    th {
+      background-color: #888;
+      border-color: #aaa #777 #777 #aaa;
+      color: #fff;
+      font-weight: normal;
+    }
+    td {
+      border-color: transparent #dadada #dadada transparent;
+      &:first-child { border-left-color: #dadada; }
+    }
+
+    tr.highlight-call > .call, tr.highlight-put > .put {
+      background-color: wheat;
+    }
+  }
+}
