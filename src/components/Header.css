@@ -1,0 +1,6 @@
+.option-chain.header {
+  display: block; }
+  .option-chain.header .strategy {
+    display: inline-block;
+    width: 50%;
+    text-align: left; }

@@ -1,0 +1,17 @@
+header.option-chain {
+  display: flex;
+  padding: 15px;
+  flex-direction: row;
+
+  .security {
+    flex-grow: 1;
+    font-weight: bold;
+  }
+  .last-update {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    strong { margin: 0 1rem; }
+  }
+}
