@@ -1,0 +1,13 @@
+.option-chain {
+  .panel-container {
+    display: flex;
+    flex-direction: row;
+
+    .left-panel {
+      width: 165px;
+    }
+    .right-panel {
+      flex-grow: 1;
+    }
+  }
+}
