@@ -1,0 +1,21 @@
+.expandable-section {
+  > header {
+    position: relative;
+  }
+
+  .toggle {
+    background: none;
+    font-family: Verdana;
+    font-size: .8rem;
+    height: 100%;
+    padding: 0 .1rem;
+    margin: .1rem 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    border-color: transparent;
+    //box-shadow: none;
+    //outline-style: none;
+  }
+}

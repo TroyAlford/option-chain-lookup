@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import 'core-js/fn/array/find';
-import formatNumber from '../utilities/formatNumber';
-import toCurrency from '../utilities/toCurrency';
+import formatNumber from '../../utilities/formatNumber';
+import toCurrency from '../../utilities/toCurrency';
 
-import './SearchResults.scss';
+import './ResultsTable.scss';
 
-@observer export default class SearchResults extends Component {
+@observer export default class ResultsTable extends Component {
 	optionFilter = (strike, option) => {
 		const { filters, quote } = this.props,
 			strikeRange = Number.parseFloat(filters.strikeRange || 25);
@@ -111,7 +111,7 @@ import './SearchResults.scss';
 	};
 
 	render = () => (
-		<div className="search-results">
+		<div className="results-table">
 			<header>Search Results</header>
 			<table cellSpacing={0}>
 				{this.renderHeader()}

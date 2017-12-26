@@ -1,8 +1,8 @@
 import React from 'react';
 import { observer } from 'mobx-react';
-import Header from './Header';
-import SearchBar from './SearchBar';
-import SearchResults from './SearchResults';
+import Header from './OptionChain/Header';
+import Filters from './OptionChain/Filters';
+import ResultsTable from './OptionChain/ResultsTable';
 
 import './OptionChain.scss';
 
@@ -11,7 +11,7 @@ export default observer(({ optionChain, filters }) => (
 		<Header quote={optionChain.quote} />
 		<div className="panel-container">
 			<div className="left-panel">
-				<SearchBar
+				<Filters
 					symbol={optionChain.symbol}
 					filters={filters}
 					expirationDates={optionChain.expirationDates}
@@ -20,7 +20,7 @@ export default observer(({ optionChain, filters }) => (
 				/>
 			</div>
 			<div className="right-panel">
-				<SearchResults
+				<ResultsTable
 					calls={optionChain.calls}
 					expirationDate={optionChain.expirationDate}
 					filters={filters}
