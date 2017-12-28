@@ -16,7 +16,6 @@ import './ExpandableSection.scss';
 				{this.props.title}
 				<button type="button" className="toggle" onClick={this.toggle}>
 					{this.expanded ? '▼' : '▶' }
-
 				</button>
 			</header>
 			{this.expanded && this.props.children}
