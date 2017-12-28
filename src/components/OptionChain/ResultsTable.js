@@ -7,6 +7,13 @@ import toCurrency from '../../utilities/toCurrency';
 import './ResultsTable.scss';
 
 @observer export default class ResultsTable extends Component {
+	static defaultProps = {
+		calls: [],
+		puts: [],
+		strikes: [],
+		filters: {}
+	};
+
 	optionFilter = (strike, option) => {
 		const { filters, quote } = this.props,
 			strikeRange = Number.parseFloat(filters.strikeRange || 25);
@@ -47,14 +54,14 @@ import './ResultsTable.scss';
 				<td key={5} className={className}>{formatNumber(option.openInterest, 0)}</td>
 			];
 		}
-		return <td className="unavailable" colSpan={5}>&nbsp;</td>;
+		return <td key={1} className="unavailable" colSpan={5}>&nbsp;</td>;
 	};
 
 	get showCall() {
-		return ['*', 'call'].includes(this.props.filters.chainType);
+		return ['*', 'call'].includes(this.props.filters.chainType || '*');
 	}
 	get showPut() {
-		return ['*', 'put'].includes(this.props.filters.chainType);
+		return ['*', 'put'].includes(this.props.filters.chainType || '*');
 	}
 
 	renderHeader = () => {
