@@ -7,6 +7,8 @@ import './Filters.scss';
 @observer
 export default class SearchBar extends Component {
 	static defaultProps = {
+		expirationDates: [],
+		filters: {},
 		onFilterChange: () => {}
 	};
 
@@ -86,7 +88,7 @@ export default class SearchBar extends Component {
 				<ExpandableSection title="Advanced Filters">
 					<label>
 						Expiration Type
-						<select name="expirationDate" onChange={this.handleChange} value={filters.expirationDate}>
+						<select name="expirationType" onChange={this.handleChange} value={filters.expirationType}>
 							<option value="*">All</option>
 							<option value="monthly">Monthly</option>
 							<option value="weekly">Weekly</option>
