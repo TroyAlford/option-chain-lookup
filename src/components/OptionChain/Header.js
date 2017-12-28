@@ -3,7 +3,7 @@ import toCurrency from '../../utilities/toCurrency';
 
 import './Header.scss';
 
-export default ({ quote }) => {
+export default ({ quote = {} }) => {
   if (quote.symbol) {
     return (
 		  <header className="option-chain">
